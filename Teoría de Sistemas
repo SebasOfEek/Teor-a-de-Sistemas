@@ -28,6 +28,10 @@
             text-align: center;
             font-size: 24px;
             font-weight: bold;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
         }
 
         nav {
@@ -36,6 +40,10 @@
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
+            position: fixed;
+            top: 50px; /* Adjust based on header height */
+            width: 100%;
+            z-index: 999;
         }
 
         nav a {
@@ -70,11 +78,11 @@
             background: white;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            margin-top: 20px;
+            margin-top: 120px; /* Adjust based on header and nav height */
             flex-grow: 1;
             text-align: center;
             overflow-y: auto; /* Allow scrolling */
-            margin-bottom: 60px; /* Ensure space for fixed footer */
+            margin-bottom: 20px; /* Adjust to ensure space for footer */
         }
 
         h2 {
@@ -114,8 +122,9 @@
             text-align: center;
             padding: 15px;
             width: 100%;
-            position: fixed;
+            position: relative; /* Change to relative */
             bottom: 0;
+            z-index: 1000;
         }
 
         .footer-content {
@@ -164,7 +173,7 @@
     <button class="menu-toggle" onclick="toggleMenu()">☰ Menú</button>
     <nav id="nav-menu">
         <a href="#" onclick="mostrarSeccion('introduccion')">Introducción</a>
-        <a href="#" onclick="mostrarSeccion('principios')">Componentes Claves</a>
+        <a href="#" onclick="mostrarSeccion('principios')">Contexto Histórico</a>
         <a href="#" onclick="mostrarSeccion('aplicaciones')">Aplicaciones</a>
         <a href="#" onclick="mostrarSeccion('esquemas')">Esquemas</a>
         <a href="#" onclick="mostrarSeccion('qr'); generarQR();">QR</a>
@@ -173,13 +182,53 @@
     <div class="container">
         <div id="introduccion" class="section active">
             <h2>Introducción a la Teoría de Sistemas</h2>
-            <img src="https://github.com/Elcalvo56As4/teoria-sistemas/raw/refs/heads/main/IMG%20-%20Teoria%20de%20Sistema/intro.jfif" 
-                 alt="Teoría de Sistemas" 
-                 class="intro-img">
+            <br>
             <p>La Teoría de Sistemas o Teoría General de Sistemas es un enfoque interdisciplinario que estudia los sistemas en general, 
                analizando sus elementos, interrelaciones e interdependencias. Se aplica a diversas disciplinas como la biología, 
                la sociología y la administración. Un sistema se caracteriza por la relación entre sus partes, que al modificarse afecta 
                a las demás, generando patrones predecibles.</p>
+            <img src="https://github.com/SebasOfEek/Teor-a-de-Sistemas/blob/main/IMG%20-%20Teoria%20de%20Sistemas/17.jpeg?raw=true" 
+                 alt="Teoría de Sistemas" 
+                 class="intro-img">
+            <p>La Teoría de Sistemas ofrece una nueva forma de entender la realidad, alejándose del determinismo mecanicista. En el ámbito social, 
+               la TSS de Luhmann transforma la visión tradicional de la sociedad, centrándose en la comunicación y su autorregulación. La ciencia, 
+               dentro de este esquema, se define como un sistema autónomo basado en su propio lenguaje y criterios de verdad.</p>
+            <p>En el ámbito social, la Teoría de Sistemas Sociales (TSS) se desarrolló a partir de conceptos como interrelación, negentropía y sinergia, 
+               con contribuciones de la cibernética (Wiener) y la autopoiesis (Maturana y Varela). Niklas Luhmann, uno de sus principales exponentes, 
+               propuso que la sociedad es un sistema de comunicación autónomo que se autorregula y diferencia a través de subsistemas como el derecho, 
+               la economía y la ciencia.</p>
+        </div>
+
+        <div id="principios" class="section">
+            <h2>Contexto Histórico</h2>
+            <br>
+            <p><strong>Autor de la Teoría de Sistemas</strong></p>
+            <p>El biólogo Ludwig von Bertalanffy formuló la TGS como un mecanismo para integrar ciencias naturales y sociales, promoviendo la formación científica. En 1954, se fundó la Society for General Systems Research, con propósitos como:</p>
+            <br>
+            <ul>
+                <li>Identificar símiltudes entre modelos de distintos campos.</li>
+                <li>Desarrollar modelos teóricos donde no los hubiera.</li>
+                <li>Evitar esfuerzos teóricos duplicados.</li>
+                <li>Unificar la ciencia bajo principios comunes.</li>
+            </ul>
+            <br>
+            <p>La TGS surgió como respuesta a la insuficiencia del enfoque analítico-reduccionista, destacando la totalidad orgánica frente a una visión mecánica del mundo. Su desarrollo influyó en áreas como la cibernética (Wiener), teoría de la información (Shannon y Weaver) y dinámica de sistemas (Forrester).</p>
+            <img src="https://github.com/SebasOfEek/Teor-a-de-Sistemas/blob/main/IMG%20-%20Teoria%20de%20Sistemas/16.jpeg?raw=true" 
+                 alt="Componentes Claves" 
+                 class="intro-img">
+            <p>En 1954, se fundó la Society for General Systems Research, con propósitos como:</p>
+            <br>
+            <ul>
+                <li>Identificar símiltudes entre modelos de distintos campos.</li>
+                <li>Desarrollar modelos teóricos donde no los hubiera.</li>
+                <li>Evitar esfuerzos teóricos duplicados.</li>
+                <li>Unificar la ciencia bajo principios comunes.</li>
+            </ul>
+            <br>
+            <p>La TGS surgió como respuesta a la insuficiencia del enfoque analítico-reduccionista, destacando la totalidad orgánica frente a una visión mecánica del mundo. Su desarrollo influyó en áreas como la cibernética (Wiener), teoría de la información (Shannon y Weaver) y dinámica de sistemas (Forrester).</p>
+            <img src="https://github.com/SebasOfEek/Teor-a-de-Sistemas/blob/main/IMG%20-%20Teoria%20de%20Sistemas/9.jpeg?raw=true" 
+                 alt="Componentes Claves" 
+                 class="intro-img">
         </div>
 
         <div id="qr" class="section">
